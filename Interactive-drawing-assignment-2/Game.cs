@@ -28,7 +28,19 @@ namespace MohawkGame2D
         /// </summary>
         public void Update()
         {
+            Window.ClearBackground(Color.Black);
 
+            DrawEye(200, 200);
+        }
+
+        void DrawEye(int x, int y)
+        {
+            Draw.LineSize = 3;
+            Draw.LineColor = Color.Black;
+            Draw.FillColor = Color.White;
+            Draw.Circle(x, y, 100);
+            Draw.FillColor = Color.Black;
+            Draw.Circle(x - 25, y, 50);
         }
     }
 
